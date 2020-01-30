@@ -9,19 +9,19 @@ variable "published_port" {
 	default = 80
 }
 
-variable "cms_port"{
+variable "host_port"{
 	description = "host port that container port maps to"
 	type = number
   default = 8000
 }
 
-variable "cms_user"{
+variable "db_user"{
   description = "username to login"
 	type = string
 	default = "user1"
 }
 
-variable "cms_user_pass" {
+variable "db_user_pass" {
   description = "user login password"
 	type = string
 	default = "user-pass"
