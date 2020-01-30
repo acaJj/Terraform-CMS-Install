@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"wp_container","Source":"../../modules/docker","Dir":""},{"Key":"wp_container.mysql_container","Source":"../mysql","Dir":"../../modules/mysql"},{"Key":"","Source":"","Dir":"."}]}
+{"Modules":[{"Key":"wp_container","Source":"../../modules/wordpress","Dir":"../../modules/wordpress"},{"Key":"wp_container.mysql_container","Source":"../mysql","Dir":"../../modules/mysql"},{"Key":"","Source":"","Dir":"."}]}

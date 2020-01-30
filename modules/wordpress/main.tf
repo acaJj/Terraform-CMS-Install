@@ -33,7 +33,7 @@ resource "docker_container" "wp" {
 
 	ports {
     internal = var.published_port
-	  external = var.db_port
+	  external = var.host_port
 	}
 }
 
@@ -66,6 +66,7 @@ resource "docker_volume" "db_data" {}
 resource "docker_network" "wp_net" {
   name = "wordpress-net"
 }
+
 
 resource "docker_image" "wordpress" {
 	name = data.docker_registry_image.wordpress.name
