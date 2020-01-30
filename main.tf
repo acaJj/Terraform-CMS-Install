@@ -6,7 +6,7 @@ provider "docker" {
 }
 
 module "cms_docker" {
-  source = "./modules/docker"
+  source = "./modules/wordpress"
   
 	cms_option = var.cms_option
 	db_user = var.db_user

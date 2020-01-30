@@ -6,7 +6,7 @@ module "mysql_container" {
   source = "../mysql"
 
 	docker_network_name = docker_network.wp_net.name
-	docker_volume_name = docker_volume.db_data.name
+  docker_volume_name = docker_volume.db_data.name
 
 	db_user = var.db_user
 	db_user_pass = var.db_user_pass
