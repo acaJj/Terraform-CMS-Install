@@ -5,12 +5,13 @@
 # Entrypoint is also needed as image by default set `terraform` binary as an
 # entrypoint.
 image:
-  name: docker:git
+  name: docker:latest
   entrypoint:
     - '/usr/bin/env'
     - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 services:
+  - docker:dind
   - wordpress:latest
   - mysql:latest
 
