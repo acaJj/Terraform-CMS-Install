@@ -20,10 +20,10 @@ variables:
   MYSQL_DATABASE: $MYSQL_DATABASE_VAR
   MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD_VAR
   
-Host: mysql
-User: root
-Password: $MYSQL_ROOT_PASSWORD
-Database: $MYSQL_DATABASE
+#Host: mysql
+#User: root
+#Password: $MYSQL_ROOT_PASSWORD
+#Database: $MYSQL_DATABASE
 
 cache:
   paths:
