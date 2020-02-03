@@ -10,9 +10,20 @@ image:
     - '/usr/bin/env'
     - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
+services:
+  - wordpress:latest
+  - mysql:latest
+
 # Default output file for Terraform plan
 variables:
   PLAN: plan.tfplan
+  MYSQL_DATABASE: $MYSQL_DATABASE_VAR
+  MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD_VAR
+  
+Host: mysql
+User: root
+Password: $MYSQL_ROOT_PASSWORD
+Database: $MYSQL_DATABASE
 
 cache:
   paths:
