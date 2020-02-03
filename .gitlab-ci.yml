@@ -41,6 +41,8 @@ plan:
     name: plan
     paths:
       - $PLAN
+  variables:
+    cms_option: "true"
 
 # Separate apply job for manual launching Terraform as it can be destructive
 # action.
