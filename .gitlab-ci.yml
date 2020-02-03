@@ -49,7 +49,7 @@ apply:
   environment:
     name: production
   script:
-    - terraform apply -input=false $PLAN
+    - terraform apply -input=false $PLAN -var='cms_option=true'
   dependencies:
     - plan
   when: manual
