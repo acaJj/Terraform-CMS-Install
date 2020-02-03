@@ -5,13 +5,13 @@
 # Entrypoint is also needed as image by default set `terraform` binary as an
 # entrypoint.
 image:
-  name: hashicorp/terraform:light
+  name: docker:git
   entrypoint:
     - '/usr/bin/env'
     - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 services:
-  - docker:latest
+  - hashicorp/terraform:light
   - wordpress:latest
   - mysql:latest
 
