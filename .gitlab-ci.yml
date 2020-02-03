@@ -36,7 +36,7 @@ validate:
 plan:
   stage: build
   script:
-    - terraform plan -out=$PLAN
+    - terraform plan -out=$PLAN -var='cms_option=true'
   artifacts:
     name: plan
     paths:
