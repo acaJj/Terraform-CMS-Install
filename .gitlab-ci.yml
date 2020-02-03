@@ -5,13 +5,12 @@
 # Entrypoint is also needed as image by default set `terraform` binary as an
 # entrypoint.
 image:
-  name: docker:latest
+  name: hashicorp/terraform:light
   entrypoint:
     - '/usr/bin/env'
     - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 services:
-  - docker:dind
   - wordpress:latest
   - mysql:latest
 
@@ -20,7 +19,7 @@ variables:
   PLAN: plan.tfplan
   MYSQL_DATABASE: $MYSQL_DATABASE_VAR
   MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD_VAR
-  DOCKER_DRIVER: overlay
+  #DOCKER_DRIVER: overlay
   
 #Host: mysql
 #User: root
