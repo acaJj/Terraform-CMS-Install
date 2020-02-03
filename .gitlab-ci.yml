@@ -13,12 +13,14 @@ image:
 services:
   - wordpress:latest
   - mysql:latest
+  - docker:dind
 
 # Default output file for Terraform plan
 variables:
   PLAN: plan.tfplan
   MYSQL_DATABASE: $MYSQL_DATABASE_VAR
   MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD_VAR
+  DOCKER_DRIVER: overlay
   
 #Host: mysql
 #User: root
@@ -30,6 +32,7 @@ cache:
     - .terraform
 
 before_script:
+  - docker info
   - terraform --version
   - terraform init
 
