@@ -11,6 +11,7 @@ image:
     - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 services:
+  - docker:latest
   - wordpress:latest
   - mysql:latest
   - docker:dind
