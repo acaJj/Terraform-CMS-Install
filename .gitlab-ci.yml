@@ -14,7 +14,6 @@ services:
   - docker:latest
   - wordpress:latest
   - mysql:latest
-  - docker:dind
 
 # Default output file for Terraform plan
 variables:
