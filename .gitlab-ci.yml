@@ -4,22 +4,16 @@
 #
 # Entrypoint is also needed as image by default set `terraform` binary as an
 # entrypoint.
-image:
-  name: hashicorp/terraform:light
-  entrypoint:
-    - '/usr/bin/env'
-    - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+image: docker:19.03.0
 
-services:
-  - wordpress:latest
-  - mysql:latest
-
-# Default output file for Terraform plan
 variables:
+  DOCKER_DRIVER: overlay2
   PLAN: plan.tfplan
   MYSQL_DATABASE: $MYSQL_DATABASE_VAR
   MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD_VAR
-  #DOCKER_DRIVER: overlay
+
+services:
+  - docker:19.03.0-dind
   
 #Host: mysql
 #User: root
@@ -32,6 +26,7 @@ cache:
 
 before_script:
   - docker info
+  - apk add terraform
   - terraform --version
   - terraform init
 
