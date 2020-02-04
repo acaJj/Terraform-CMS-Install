@@ -26,14 +26,6 @@ variables:
 #Password: $MYSQL_ROOT_PASSWORD
 #Database: $MYSQL_DATABASE
 
-[[runners]]
-  executor = "docker"
-  [runner.driver]
-    image = "docker:latest"
-    tls.verify = false
-    priviledged = false
-    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
-
 cache:
   paths:
     - .terraform
