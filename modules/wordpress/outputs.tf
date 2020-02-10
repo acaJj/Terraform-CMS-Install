@@ -3,7 +3,17 @@
 #  value = docker_container.db.env
 #}
 
-output "db_instance_name" {
-  description = "db name"
-	value = module.mysql_container.db_instance_name
+#output "db_instance_name" {
+	#description = "db name"
+	#value = module.mysql_container.db_instance_name
+	#}
+
+output "db_network_name" {
+  description = "network"
+  value = var.docker_network_name
+}
+
+output "db_volume_name" {
+  description = "storage volume"
+	value = var.docker_volume_name
 }

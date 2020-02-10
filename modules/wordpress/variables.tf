@@ -15,6 +15,24 @@ variable "host_port"{
   default = 8000
 }
 
+variable "db_instance_name" {
+  description = "name of the db"
+	type = string
+	default = "db"
+}
+
+variable "docker_network_name" {
+  description = "network name"
+	type = string
+	default = "terranet"
+} 
+
+variable "docker_volume_name" {
+  description = "storage volume for data persistence"
+	type = string
+	default = "terrastore"
+}
+
 variable "db_user"{
   description = "username to login"
 	type = string
