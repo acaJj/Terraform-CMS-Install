@@ -29,10 +29,10 @@ resource "docker_container" "db" {
 	  container_path = "/var/lib/mysql"
 	}
 
-	ports {
-    internal = 3306
-		external = 3306
-	}
+	#ports {
+		#   internal = 3306
+		#external = 3306
+		#}
 }
 
 resource "docker_image" "mysql" {

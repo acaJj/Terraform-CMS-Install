@@ -39,12 +39,12 @@ resource "docker_container" "lara" {
   ]
 
   env = [
-    "APP_URL=http://lara.test",
+		#   "APP_URL=http://lara.test",
     "DB_HOST=${var.db_instance_name}:3306",
     "DB_USERNAME=${var.db_user}",
     "DB_PASSWORD=${var.db_user_pass}",
     "DB_DATABASE=${var.db_name}",
-    "DB_PORT=3306",
+		#"DB_PORT=3306",
     "DB_CONNECTION=mysql",
   ]
 

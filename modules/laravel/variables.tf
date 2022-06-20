@@ -15,6 +15,18 @@ variable "host_port"{
   default = 8000
 }
 
+variable "db_instance_name" {
+  description = "db name"
+	type = string
+	default = "db"
+}
+
+variable "docker_network_name" {
+  description = "docker network name"
+	type = string
+	default = "terranet"
+}
+
 variable "db_user"{
   description = "username to login"
 	type = string
